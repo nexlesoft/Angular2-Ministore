@@ -1,5 +1,4 @@
 # Angular2-Store
-Demo: https://minhlong.github.io/Angular2-Store
 ## 1. Development
 
 > 1st Initial the Angular2-Store
