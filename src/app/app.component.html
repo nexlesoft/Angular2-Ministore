@@ -1,0 +1,37 @@
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="filters-wrapper">
+          <cart></cart>
+          <filters #filtersComponent
+                   [categories]="storeData.categories"
+                   [marriedFilters]='marriedFilters'
+                   [sexFilters]='sexFilters'
+                   [priceFilters]='priceFilters'
+                   (onFilterChange)='onFilterChange($event)'></filters>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="row">
+          <div class="col-8">
+            <div class="sort-filters-wrapper">
+              <sort-filters [filters]='sortFilters' (onSortChange)='sortProducts($event)'></sort-filters>
+            </div>
+          </div>
+          <div class="col-4">
+            <search-bar #searchComponent (onSearchChange)='onSearchChange($event)'></search-bar>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12"></div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <product [products]='products'></product>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
